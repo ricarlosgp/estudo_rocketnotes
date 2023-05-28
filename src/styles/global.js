@@ -4,7 +4,7 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle` //exportando por default o createGlobalStyle utilizando template literals com backticks
 
-    :root {
+    :root { //com o root element ou :root, estou convertendo 16px para 10px e assim fica melhor de calcular o rem pois ao invés de 1rem valer 16px ele passa a valer 10px e assim fica melhor ao fazer a divisão
         font-size: 62.5%;
     }
 
