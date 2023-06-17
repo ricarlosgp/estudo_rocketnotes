@@ -13,8 +13,8 @@ export default createGlobalStyle` //exportando por default o createGlobalStyle u
         padding: 0;
         box-sizing: border-box;
     }
-    body {//estilizando todo o corpo das páginas
-        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900}; //estilizando cor de fundo de todo body para cor laranja. Esse {theme} refere-se ao arquivo theme.js global criado em styles. Esse theme.COLORS.ORANGE refere-se que dentro do arquivo theme.js há um COLORS na cor ORANGE
+    body {//estilizando todo o corpo das páginas(home, notepreview, signin...)
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800}; //estilizando cor de fundo de todo body para cor laranja. Esse {theme} refere-se ao arquivo theme.js global criado em styles. Esse theme.COLORS.ORANGE refere-se que dentro do arquivo theme.js há um COLORS na cor ORANGE
         color: ${({ theme }) => theme.COLORS.WHITE}; //estilizando a cor do texto de todo meu body para BRANCO.Esse {theme} refere-se ao arquivo theme.js global criado em styles. Esse theme.COLORS.WHITE refere-se que dentro do arquivo theme.js há um COLORS na cor WHITE
 
         -webkit-font-smoothing: antialiased; //propriedade para deixar as fontes suaves

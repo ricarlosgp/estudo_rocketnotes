@@ -1,7 +1,15 @@
+//estruturando o Header para ser utilizado nas páginas: Note Preview, Home, Perfil e Note Create 
+
 //aqui iremos importar do styles.js e exportar o Header para podermos importar na pasta Details
 import { Container } from './styles';
 //importando o Container do arquivo styles.js do Header e esse { Container } foi criado e exportado no arquivo styles.js é toda estilização do export const Container = styled.header 
-import kurumim from '../Imagens/kurumim.jpg' //importando a imagem chamada de kurumim da pasta imagens
+
+//import kurumim from '../Imagens/kurumim.jpg' //importando a imagem chamada de kurumim da pasta imagens
+
+import { Rgpr } from './styles';//importando o export const Rgpr = styled.div do arquivo styles.js
+
+
+
 import { Profile } from './styles'; //importando o componente Profile do styles.js
 import { RiShutDownLine } from 'react-icons/ri'; //importando o ícone chamado de {RiShutDownLine} de dentro do react-icons, da biblioteca Remix Icon que está abreviada como ri
 import { Logout } from './styles'; // importando o Logout(botão de logout à direita do header do arquivo styles.js 
@@ -11,12 +19,11 @@ export function Header( ){//criando e exportando uma função/function chamada d
     //Profile é um componente que vai conter uma img e uma div. Esse componente foi criado e exportado como: export const Profile = styled.div em styles.js.  
     //Logout é um componente que foi criado em  que vai ser utilizado o ícone RiShutDownLine de dentro da biblioteca ri 
         <Container>
-            <Profile>
-                <img 
-                    src={kurumim}
-                    alt="Foto kurumim"
-                />
+            
+            
 
+            <Profile>
+                <Rgpr />
                 <div>
                     <span> Bem vindo,</span>
                     <strong> Ricarlos Guimarães</strong>
@@ -26,6 +33,8 @@ export function Header( ){//criando e exportando uma função/function chamada d
             <Logout>
                 <RiShutDownLine />
             </Logout>
+           
+            
             
         </Container>
     );
