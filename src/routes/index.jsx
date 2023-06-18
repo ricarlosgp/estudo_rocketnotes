@@ -6,8 +6,8 @@ import { AuthRoutes } from './auth.routes'; //importando o AuthRoutes que foi ex
 export function Routes(){ //criando e exportando uma função chamada de Routes que vai me retornar o BrowserRouter (importado lá em cima) e AppRoutes
     return (
         <BrowserRouter>
-            <AppRoutes /> {/*estou comentando o AppRoutes para eu renderizar o AuthRoutes */}
-            {/*<AuthRoutes /> {/*estou comentando o AuthRoutes para eu renderizar o AppRoutes */}
+            {/*<AppRoutes /> {/*estou comentando o AppRoutes para eu renderizar o AuthRoutes */}
+            <AuthRoutes /> {/*estou comentando o AuthRoutes para eu renderizar o AppRoutes */}
         
         </BrowserRouter>
     )
