@@ -7,6 +7,8 @@ import { SignUpImg } from './styles';
 import { FiUser, FiMail, FiLock } from 'react-icons/fi';
 import { Form } from './styles';
 
+import { Link } from 'react-router-dom'; //importando Link do react-router-dom para aplicarmos as navegações entre páginas. Será aplicado logo abaixo no export function
+
 
 export function SignUp() {
     return (
@@ -38,9 +40,11 @@ export function SignUp() {
 
                 <Button title= "Cadastrar" />
 
-                <a href="#">
+
+                {/* utilizando o Link para navegar na rota rais do projeto / (essa rota raiz / faz parte do auth.routes.jsx que é a página de SignIn ) então ao clicar no link Voltar para o login ele me levará para a página de SignIn para fazer meu login */}
+                <Link to="/">
                     Voltar para o login
-                </a>
+                </Link>
             </Form>
             
         </Container>

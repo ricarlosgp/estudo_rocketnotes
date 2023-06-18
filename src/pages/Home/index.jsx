@@ -81,7 +81,9 @@ export function Home(){ //exportando e estruturando uma função chamada de home
 
             </Content>  
 
-            <NewNote>
+
+           {/* utilizando o Link do export const NewNote = styled(Link) criado no styles.js para navegar na rota: /notecreate (essa /notecreate faz parte do app.routes.jsx que é a página NoteCreate) então ao clicar no botão Criar nota da página Home que agora não é mais um botão e sim um link ele vai me redirecionar para a página de NoteCreate */}
+            <NewNote to="/notecreate">
                 <FiPlus/>
                 Criar nota
             </NewNote>

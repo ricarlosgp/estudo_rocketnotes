@@ -11,6 +11,10 @@ NewNote,
 Agora eu faço assim, pega a primeira vírgula e vá apertando control D que vai selecionando todas as vírgulas e apago as vírgula. Aperta o home para todos irem para o começo do texto e agora digita: export const que vai ser ser digitado em todos os elementos de uma só vez. Aperta a tecla end para ir para o final dos textos e coloca = styled.div``; e enter. Vai ser digitado em todos os elementos e espaço entre ele e agora eu só mudo o que cada elemento vai ser por ex: o menu vai ser uma ul e etc.
 */
 
+import { Link } from 'react-router-dom'; //importando Link do react-router-dom para aplicarmos as navegações entre páginas. Será aplicado logo abaixo no export const NewNote. Esse import { Link } terá funcionalidade quando criarmos as rotas ou routes
+
+
+
 //Aqui irei estilizar todo o meu Container junto com a grid-areas. As estilizações de cada elemento foi feito em components
 
 //estilizando todo o meu Container que vai receber: brand, header, menu, search, content e newnote.
@@ -77,11 +81,12 @@ export const Content = styled.div`
     
 `;
 
-//estilizando a grid-area NewNote que contêm dentro de sua área um ícone e o botão de Criar nota. 
-export const NewNote = styled.button`
+//estilizando a grid-area NewNote que contêm dentro de sua área um ícone + e um Link de Criar nota. Esse (Link) foi importado lá em cima e somente podemos utilizar dessa forma após criar a pasta routes ou rotas 
+export const NewNote = styled(Link)`
     grid-area: newnote; 
     background-color: ${({ theme }) => theme.COLORS.ORANGE};
-    border: none;
+    color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+    
 
     display: flex;
     align-items: center;

@@ -6,10 +6,12 @@ import styled from 'styled-components'; //importando o styled do styled-componen
 
 import RgprJpg from "../../assets/rgpr.jpg" 
 
+import { Link } from 'react-router-dom'; //importando Link do react-router-dom para aplicarmos as navegações entre páginas. Será aplicado logo abaixo no export const NewNote. Esse import { Link } terá funcionalidade quando criarmos as rotas ou routes
 
 //estilizando a caixa do header que contêm: img + bem vindo + nome + botão
-export const Container = styled.div` //criando, estilizando e exportando uma variável do tipo constante/const chamada de Container(posso dar qualquer nome) que recebe de dentro do meu styled um elemento html que é uma div e eu posso estilizar essa div através da tag semântica (``;)
-    //background: red; //colocando plano de fundo no header na cor vermelha
+export const Container = styled.div` //criando, estilizando e exportando uma variável do tipo constante/const chamada de Container(posso dar qualquer nome) que recebe de dentro do meu styled um elemento html que é uma div e eu posso estilizar essa div através da tag semântica
+
+    background: red; //colocando plano de fundo no header na cor vermelha
     grid-area: header; // fixando o cabeçalho/header ou seja: ao rolar a minha tela o cabeçalho vai ficar fixo
 
     height: 105px; //altura do cabeçalho de 105px
@@ -22,13 +24,13 @@ export const Container = styled.div` //criando, estilizando e exportando uma var
     display: flex; //dentro do meu header/cabeçalho os elementos serão organizados em linha
     justify-content: space-between; //Os itens são distribuídos uniformemente dentro do contêiner de alinhamento ao longo do eixo principal. Nesse caso os container: Profile e Logout irão ficar alinhados à esquerda(Profile) e à direita o (botão sair). Para utilizar o justify-content primeiro temo que colocar o display:flex
     
-    padding: 0 80px; //preenchimento zerado em cima e embaixo e 80 px nas laterais(esquerdo e direito)
+    padding: 0 80px; //preenchimento zerado em cima e embaixo e 80 px nas laterais(esquerdo e direito).A caixa do profile(foto + span + strong) e a caixa do botão Logout terão espaçamento superior e inferior de zero e laterais esquerdo e direito de 80px
         
 `;
-export const Profile = styled.div` //exportando e criando uma const chamada Profile(caixa de cor verde) que recebe uma estilização ou styled que é uma div ou styled.div para estilizar o seguinte: 
-   // background:green; //cor de preenchimento da caixa profile
+export const Profile = styled(Link)` //exportando e criando uma const chamada Profile(caixa de cor verde) que recebe uma estilização ou styled um (Link) que foi importado lá em cima para redirecionar para a pagina de profile 
+    background:green; //cor de preenchimento da caixa profile
     
-    display: flex; //os itens da caixa Profile(caixa de cor verde) são posicionados de maneira sequencial da esquerda para a direita horizontalmente
+    display: flex; //os itens da caixa Profile(caixa de cor verde) são posicionados de maneira sequencial da esquerda para a direita horizontalmente    
     align-items: center; //os itens contido na caixa Profile(de cor verde) serão alinhados ao centro da caixa Profile
          
     > div { //pegando a primeira > div do Profile e estilizando. Essa div contêm o span e strong
@@ -62,8 +64,8 @@ export const Rgpr = styled.div`
 `;
 
 export const Logout = styled.button`//exportando e criando uma const chamada Logout(botão de logout à direita do header) que recebe uma estilização ou styled do tipo button e dentro da tag semântica irei estilizar o meu botão da seguinte forma:
-    background: none; //sem preenchimento
-    border: none; //sem bordas    
+    background: green; 
+    border: none; 
 
     > svg { //o botão é um svg e está dentro de Logout com nome de RiShutDownLine em index.jsx 
         color: ${({ theme }) => theme.COLORS.GRAY_100}; //cor do botão

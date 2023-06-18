@@ -8,29 +8,57 @@ import { ThemeProvider } from 'styled-components'; // importando o ThemProvider 
 import theme from './styles/theme'; //importando o theme.js de styles
 import GlobalStyles from './styles/global'; //importando o {createGlobalStyle} da pasta styles e do arquivo global.js
 
-//import { SignIn } from './pages/SignIn'; // importando o SignIn de dentro do components/SignIn
-//import { SignUp } from './pages/SignUp'; // importando o SignIn de dentro do components/SignIn
-
-//import { NotePreview } from '../src/pages/NotePreview' //importando para renderizar ou visualizar em tela toda minha página NotePreview de src/pages/NotePreview. Para renderizar ou visualizar a page Home eu preciso comentar esse import e descomentar o import de Home
-
-//import { Home } from '../src/pages/Home' //importando para renderizar ou visualizar em tela toda minha página Home de src/pages/Home. Para renderizar a page NotePreview eu preciso comentar esse import e descomentar o import de NotePreview
-//import { Header } from './components/Header';
-//import { Profile } from './pages/Profile'; // importando o SignIn de dentro do components/SignIn
-import { NoteCreate } from './pages/NoteCreate'; // importando o componente ou página NoteCreate
+import { Routes } from './routes'; // importando {Routes} que foi exportada do index.jsx da pasta routes
 
 ReactDOM.createRoot(document.getElementById('root')).render(//O react está utilizando o ReactDOM para selecionar e pegar dentro do meu document um elemento pelo ID e o nome desse elemento é o root que vai ser renderizado, que vai ser inserido ali um conteúdo que iremos inserir dentro de <React.StrictMode> e para comentar dentro do <React.StrictMode> inserimos entre chaves o comentário {/* */}   
   <React.StrictMode>
     <ThemeProvider theme={ theme }> {/* estou aplicando o theme.js que é global para os componentes abaixo:*/} 
       <GlobalStyles /> {/*renderizando meus estilos global*/ }
-      {/*<Header />*/}
-      {/*<NotePreview /> {/*estou comentando o NotePreview para não renderizar em tela e sim o Home*/}     
-      {/*<Home /> {/*estou comentando o Home para não ser renderizado em tela e sim o SignIn*/}
-      {/*<SignIn /> {/*estou comentando o SignIn para não ser renderizado em tela e sim o SignUp*/}
-      {/*<SignUp /> {/*estou comentando o SignUp para não ser renderizado em tela e sim o Profile*/}
-      {/*<Profile /> {estou comentando o Profile para não ser renderizado em tela e sim o NoteCreate*/}
-      <NoteCreate />
+      <Routes />{/*renderizando minha Routes qeu será a Home como principal e para mudar de página terei que colocar no nome no navegador*/ }
          
     </ThemeProvider>    
   </React.StrictMode>
 )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ANTES DA CRIAÇÃO RAS ROTAS/ROUTES
+
+//import { SignIn } from './pages/SignIn'; // importando o SignIn de dentro do components/SignIn
+// //import { SignUp } from './pages/SignUp'; // importando o SignIn de dentro do components/SignIn
+
+// //import { NotePreview } from '../src/pages/NotePreview' //importando para renderizar ou visualizar em tela toda minha página NotePreview de src/pages/NotePreview. Para renderizar ou visualizar a page Home eu preciso comentar esse import e descomentar o import de Home
+
+// //import { Home } from '../src/pages/Home' //importando para renderizar ou visualizar em tela toda minha página Home de src/pages/Home. Para renderizar a page NotePreview eu preciso comentar esse import e descomentar o import de NotePreview
+// //import { Header } from './components/Header';
+// //import { Profile } from './pages/Profile'; // importando o SignIn de dentro do components/SignIn
+// import { NoteCreate } from './pages/NoteCreate'; // importando o componente ou página NoteCreate
+
+// ReactDOM.createRoot(document.getElementById('root')).render(//O react está utilizando o ReactDOM para selecionar e pegar dentro do meu document um elemento pelo ID e o nome desse elemento é o root que vai ser renderizado, que vai ser inserido ali um conteúdo que iremos inserir dentro de <React.StrictMode> e para comentar dentro do <React.StrictMode> inserimos entre chaves o comentário {/* */}   
+//   <React.StrictMode>
+//     <ThemeProvider theme={ theme }> {/* estou aplicando o theme.js que é global para os componentes abaixo:*/} 
+//       <GlobalStyles /> {/*renderizando meus estilos global*/ }
+//       {/*<Header />*/}
+//       {/*<NotePreview /> {/*estou comentando o NotePreview para não renderizar em tela e sim o Home*/}     
+//       {/*<Home /> {/*estou comentando o Home para não ser renderizado em tela e sim o SignIn*/}
+//       {/*<SignIn /> {/*estou comentando o SignIn para não ser renderizado em tela e sim o SignUp*/}
+//       {/*<SignUp /> {/*estou comentando o SignUp para não ser renderizado em tela e sim o Profile*/}
+//       {/*<Profile /> {estou comentando o Profile para não ser renderizado em tela e sim o NoteCreate*/}
+//       <NoteCreate />
+         
+//     </ThemeProvider>    
+//   </React.StrictMode>
+// )
 

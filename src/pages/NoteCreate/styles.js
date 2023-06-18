@@ -11,6 +11,18 @@ export const Container = styled.div`
     "header"
     "content";
 
+    > main {
+        grid-area: content; //dentro do main no grid-area do content irei ativar o overflow: scroll
+        overflow: auto; //vai aparecer a barra de rolagem automaticamente para toda main quando a tela for menor e vai ficar fixo o meu header/cabeçalho
+    }
+
+    .tags { //estilizando minha div className chamada de tags
+        display: flex; //colocando as tags(react e nova tag) uma ao lado da outra
+        justify-content: space-between; //a caixa react vai ficar à esquerda e a tag Nova Tag ao lado direito da caixa do Container
+        flex-wrap: wrap; //quando não couber mais caixas na mesma linha(no caso está ocupando duas tags ou dois marcadores por linhas) o flex-wrap: wrap vai jogar para linha debaixo
+
+    }
+
 `;
 
 //criando e exportando uma variável do tipo constante/const chamada de Form que será do tipo form do meu styled. Essa exportação será importada somente no meu arquivo index.jsx da minha página NoteCreate e será estilizada da  seguinte forma:
